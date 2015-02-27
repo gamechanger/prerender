@@ -6,7 +6,7 @@ WORKDIR /gc/prerender
 RUN apt-get update
 RUN apt-get install -y libfontconfig
 RUN npm install
-ENV PORT=80
+ENV PORT 80
 
 EXPOSE 80
 
