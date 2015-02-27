@@ -6,8 +6,10 @@ WORKDIR /gc/prerender
 RUN apt-get update
 RUN apt-get install -y libfontconfig
 RUN npm install
+RUN mkdir -p /var/log/prerender
+
 ENV PORT 80
 
 EXPOSE 80
 
-CMD /usr/bin/node /gc/prerender/server.js
+CMD ./docker-init
